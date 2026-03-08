@@ -1,0 +1,59 @@
+{
+  "timeout": 5,
+  "apis": [
+    {
+      "name": "GitHub API",
+      "url": "https://api.github.com",
+      "params": {}
+    },
+    {
+      "name": "JSONPlaceholder Posts",
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "params": {}
+    },
+    {
+      "name": "Dog API",
+      "url": "https://dog.ceo/api/breeds/image/random",
+      "params": {}
+    },
+    {
+      "name": "Open Meteo Weather",
+      "url": "https://api.open-meteo.com/v1/forecast",
+      "params": {
+        "latitude": 41.76,
+        "longitude": -72.67,
+        "current_weather": "true"
+      }
+    },
+    {
+        "name": "Cat Fact API",
+        "url": "https://catfact.ninja/fact",
+        "params": {}
+
+    },
+    {
+      "name": "Advice Slip API",
+      "url": "https://api.adviceslip.com/advice",
+      "params": {}
+    },
+    {
+      "name": "Agify Age Prediction",
+      "url": "https://api.agify.io",
+      "params": {
+        "name": "michael"
+      }
+    },
+    {
+      "name": "Genderize API",
+      "url": "https://api.genderize.io",
+      "params": {
+        "name": "alex"
+      }
+    },
+    {
+      "name": "Broken GitHub Endpoint",
+      "url": "https://api.github.com/thispagedoesnotexist",
+      "params": {}
+    }
+  ]
+}
