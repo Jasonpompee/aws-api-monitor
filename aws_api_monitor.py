@@ -44,20 +44,20 @@ def lambda_handler(event, context):
             response.raise_for_status()
 
             end_time = time.time()
-            response_time = round((end_time - start_time) * 1000, 2)
+            response_time_ms = round((end_time - start_time) * 1000, 2)
 
             results.append({
                 "name": name,
                 "url": url,
                 "status": "SUCCESS",
                 "status_code": response.status_code,
-                "response_time": response_time,
+                "response_time_ms": response_time_ms,
                 "error": None
             })
 
         except requests.exceptions.RequestException as e:
             end_time = time.time()
-            response_time = round((end_time - start_time) * 1000, 2)
+            response_time_ms = round((end_time - start_time) * 1000, 2)
 
             logger.error(f"{name} FAILED: {str(e)}")
 
@@ -66,7 +66,7 @@ def lambda_handler(event, context):
                 "url": url,
                 "status": "FAILED",
                 "status_code": None,
-                "response_time": response_time,
+                "response_time_ms": response_time_ms,
                 "error": str(e)
             })
 
@@ -78,20 +78,20 @@ def lambda_handler(event, context):
     for result in results:
         if result["status"] == "SUCCESS":
             successful += 1
-            total_response_time += result["response_time"]
+            total_response_time += result["response_time_ms"]
         else:
             failed += 1
 
     if successful > 0:
-        average_response_time = round(total_response_time / successful, 2)
+        average_response_time_ms = round(total_response_time / successful, 2)
     else:
-        average_response_time = None
+        average_response_time_ms = None
 
     summary = {
         "total_apis": total_apis,
         "successful": successful,
         "failed": failed,
-        "average_response_time": average_response_time
+        "average_response_time_ms": average_response_time_ms
     }
 
     logger.info(f"Summary: {summary}")
@@ -119,3 +119,5 @@ def lambda_handler(event, context):
         "report_file": report_key,
         "summary": summary
     }
+           
+         
