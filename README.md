@@ -32,11 +32,6 @@ Report is saved to Amazon S3
 - Logs execution details to AWS CloudWatch
 
 
-  ## Configuration
-
-The Lambda function loads its configuration from a JSON file stored in Amazon S3.
-
-Example configuration file:
 ## Configuration
 
 The Lambda function loads its configuration from a JSON file stored in Amazon S3.
