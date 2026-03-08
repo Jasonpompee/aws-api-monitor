@@ -79,14 +79,9 @@ Name of the JSON configuration file stored in the bucket.
 
 
 
-
-
-
-
 ## Example Output Report
 
 After checking all APIs, the Lambda function generates a monitoring report and saves it to S3.
-
 
 Example report structure:
 
@@ -96,14 +91,14 @@ Example report structure:
     "total_apis": 3,
     "successful": 2,
     "failed": 1,
-    "average_response_time": 142.8
+    "average_response_time_ms": 142.8
   },
   "results": [
     {
       "name": "GitHub API",
       "status": "SUCCESS",
       "status_code": 200,
-      "response_time": 87.4
+      "response_time_ms": 87.4
     },
     {
       "name": "Example API",
@@ -112,3 +107,6 @@ Example report structure:
     }
   ]
 }
+
+
+
