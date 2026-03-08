@@ -58,20 +58,11 @@ Example configuration file:
     }
   ]
 }
-
-
-
-
-
-
-
+```
 
 ## Environment Variables
 
-
-
 The Lambda function uses environment variables instead of hardcoding configuration values.
-
 
 
 
