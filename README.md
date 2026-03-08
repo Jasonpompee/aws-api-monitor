@@ -60,17 +60,35 @@ Example configuration file:
 }
 
 
+
+
+
+
+
+
 ## Environment Variables
 
+
+
 The Lambda function uses environment variables instead of hardcoding configuration values.
+
+
+
 
 Required variables:
 
 CONFIG_BUCKET  
 Name of the S3 bucket that stores the configuration file.
 
+
+
 CONFIG_FILE  
 Name of the JSON configuration file stored in the bucket.
+
+
+
+
+
 
 
 
